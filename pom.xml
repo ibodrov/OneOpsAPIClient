@@ -53,9 +53,25 @@
   </dependencies>
 
   <scm>
+    <connection>scm:git:https://gecgithub01.walmart.com/devtools/OneOpsAPIClient.git</connection>
     <developerConnection>scm:git:https://gecgithub01.walmart.com/devtools/OneOpsAPIClient.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>proximity</id>
+      <url>https://repository.walmart.com/content/repositories/pangaea_releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>proximity</id>
+      <url>https://repository.walmart.com/content/repositories/pangaea_snapshots</url>
+    </snapshotRepository>
+    <site>
+      <id>proximity</id>
+      <url>dav:https://repository.walmart.com/repository/mvn-site/looper-example-maven/</url>
+    </site>
+  </distributionManagement>
 
   <build>
     <plugins>
@@ -64,7 +80,7 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>2.5.3</version>
         <configuration>
-          <localCheckout>true</localCheckout> <!-- must be true -->
+          <localCheckout>true</localCheckout>
           <autoVersionSubmodules>true</autoVersionSubmodules>
         </configuration>
       </plugin>
