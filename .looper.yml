@@ -1,0 +1,16 @@
+tools:
+  jdk: 8
+  maven: 3.5.4
+
+triggers:
+  - manual:
+      name: Release
+      call: release
+
+flows:
+  default:
+    - mvn -B -U clean deploy
+  pr:
+    - mvn -B clean verify
+  release:
+    - mvn -B -U release:prepare release:perform

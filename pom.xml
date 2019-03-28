@@ -5,6 +5,7 @@
     <artifactId>buildsupport</artifactId>
     <version>3</version>
   </parent>
+  <groupId>com.walmartlabs.concord.oneops</groupId>
   <artifactId>oneops-client</artifactId>
   <version>5.0.22-SNAPSHOT</version>
   <dependencies>
@@ -52,32 +53,21 @@
   </dependencies>
 
   <scm>
-    <developerConnection>scm:git:git@github.com:oneops/oneops-api.git</developerConnection>
-    <url>https://github.com/oneops/oneops-client</url>
+    <developerConnection>scm:git:https://gecgithub01.walmart.com/devtools/OneOpsAPIClient.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
   <build>
     <plugins>
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>cobertura-maven-plugin</artifactId>
-        <version>2.6</version>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
         <configuration>
-          <formats>
-            <format>xml</format>
-          </formats>
+          <localCheckout>true</localCheckout> <!-- must be true -->
+          <autoVersionSubmodules>true</autoVersionSubmodules>
         </configuration>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>cobertura</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
-
 </project>
