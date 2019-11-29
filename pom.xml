@@ -7,7 +7,7 @@
   </parent>
   <groupId>com.walmartlabs.concord.oneops</groupId>
   <artifactId>oneops-client</artifactId>
-  <version>5.0.27</version>
+  <version>5.0.28-SNAPSHOT</version>
   <dependencies>
     <dependency>
       <groupId>com.jayway.restassured</groupId>
@@ -55,7 +55,7 @@
   <scm>
     <connection>scm:git:https://gecgithub01.walmart.com/devtools/OneOpsAPIClient.git</connection>
     <developerConnection>scm:git:https://gecgithub01.walmart.com/devtools/OneOpsAPIClient.git</developerConnection>
-    <tag>release-5.0.27</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
